@@ -4,7 +4,6 @@ import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
 const App = () => {
-  console.log(useState);
   const [message, useMessage] = useState({
     todos: [
       {

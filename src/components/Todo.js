@@ -1,4 +1,5 @@
 import React from 'react';
+import './todo.css';
 
 const Todo = props => {
   const toggleTodo = id => {
@@ -11,10 +12,16 @@ const Todo = props => {
         todos: newComplete
       };
     });
+    console.log(props.todo.completed);
   };
   return (
     <div>
-      <h1 onClick={() => toggleTodo(props.todo.id)}>{props.todo.task}</h1>
+      <h1
+        onClick={() => toggleTodo(props.todo.id)}
+        className={props.todo.completed ? 'line-through' : null}
+      >
+        {props.todo.task}
+      </h1>
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import React, { Component, useState } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
 const App = () => {
+  console.log(useState);
   const [message, useMessage] = useState({
     todos: [
       {
